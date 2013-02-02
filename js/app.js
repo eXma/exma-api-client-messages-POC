@@ -179,7 +179,7 @@ window.Session = Backbone.Model.extend({
             xhrFields: {
                 withCredentials: true
             },
-            async: false
+            async: true
         });
     }
 
@@ -231,7 +231,10 @@ window.LoginView = Backbone.View.extend({
     },
     start: function () {
         this.render();
-        this.model.check();
+        var that = this;
+        this.screen.on("shown", function() {
+            that.model.check();
+        });
     }
 });
 
