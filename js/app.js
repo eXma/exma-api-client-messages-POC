@@ -198,7 +198,7 @@ window.LoginView = Backbone.View.extend({
         this.model.on("change:active", this.checkSession, this);
     },
     setUser: function () {
-        this.$el.find("#username").html(this.model.get("user"));
+        this.$el.find("#Username").html(this.model.get("user"));
     },
     checkSession: function () {
         if (this.model.get("active")) {
