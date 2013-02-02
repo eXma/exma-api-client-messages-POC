@@ -1,0 +1,14 @@
+<div class="accordion-group" style="margin-bottom: 10px">
+    <div class="accordion-heading" style="background-color: #f5f5f5">
+        <span class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#messageCollapse_{{id}}">
+            <p><strong>{{title}}</strong></p>
+            From: {{from}} To: {{to}}
+            <span style="float: right">{{from_now}}</span>
+        </span>
+    </div>
+    <div id="messageCollapse_{{id}}" class="accordion-body collapse out">
+        <div class="accordion-inner">
+            <pre>{{body.text}}</pre>
+        </div>
+    </div>
+</div>
